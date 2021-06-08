@@ -15,7 +15,7 @@ if ErrorLevel
 ExitApp 0
 else
 if !FileExist(%UserInput%) {
-MsgBox, 0, Serkket Servers, Server will build files, press ok to continue
+MsgBox, 0, Serkket Servers, Server will build files, press ok to continue `n Server will open when done
 FileCreateDir, %UserInput%
 }
 SetWorkingDir %UserInput%
@@ -47,3 +47,4 @@ exit /B
 ), Run.Bat
 }
 Run, Run.Bat
+
