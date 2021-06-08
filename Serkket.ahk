@@ -1,4 +1,4 @@
-﻿#NoEnv
+#NoEnv
 ; #Warn
 SendMode Input
 SetWorkingDir %A_ScriptDir%
@@ -14,8 +14,8 @@ InputBox, UserInput, Server, Please enter the name of a server you want to run `
 if ErrorLevel
 ExitApp 0
 else
-MsgBox, 0, Serkket Servers, Server will build files, press ok to continue
 if !FileExist(%UserInput%) {
+MsgBox, 0, Serkket Servers, Server will build files, press ok to continue
 FileCreateDir, %UserInput%
 }
 SetWorkingDir %UserInput%
@@ -47,4 +47,3 @@ exit /B
 ), Run.Bat
 }
 Run, Run.Bat
-
