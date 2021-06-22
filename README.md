@@ -31,6 +31,7 @@ Play with friends from anywhere, anytime, always
 ### 9: All editions!
 Play with people from bedrock AND java!
 
+#### Supported Server types:
 - [x] Spigot
 - [ ] Glowstone
 - [ ] Fabric
