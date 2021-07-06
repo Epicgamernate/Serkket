@@ -34,8 +34,8 @@ Play with people from bedrock AND java!
 #### Supported Server types:
 - [x] Spigot
 - [ ] Glowstone
-- [ ] Fabric
-- [ ] Paper / Bukkit
+- [x] Fabric
+- [ ] Paper
 - [ ] Forge
 - [ ] Mohist / Magma
 - [ ] Vanilla
