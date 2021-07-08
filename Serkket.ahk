@@ -26,7 +26,7 @@ Gui, SelectServers:Show
 WinWaitClose, ahk_id %SelectServersHwnd%
 }
 SetWorkingDir %UserInput%
-if (ServSoft = "Spigot") {
+if (ServSoft = "Spigot (Plugins)") {
 if !FileExist("spigot-%ServVers%.jar") {
 UrlDownloadToFile, https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar, BuildTools.jar
 RunWait, cmd.exe /c "java -jar BuildTools.jar --rev %ServVers% && cls && pause"
@@ -43,7 +43,7 @@ UrlDownloadToFile, https://playit.gg/downloads/playit-win_64-0.4.4.exe, Tunnel.e
 if !FileExist("eula.txt") {
 FileAppend, eula=true, eula.txt
 }
-if ( ServSoft = "Spigot" ) {
+if ( ServSoft = "Spigot (Plugins)" ) {
 if !FileExist("Run.bat") {
 FileAppend,
 (
