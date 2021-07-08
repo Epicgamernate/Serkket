@@ -47,7 +47,7 @@ Goto, Fabric
 } else {
 paper:
 if !FileExist("paper.jar") {
-UrlDownloadToFile, https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/90/downloads/paper-1.17.1-90.jar, paper.jar
+UrlDownloadToFile, https://papermc.io/api/v1/paper/%ServVers%/latest/download, paper.jar
 }
 if !FileExist("paper.jar") {
 Goto, paper
