@@ -35,7 +35,7 @@ Play with people from bedrock AND java!
 - [x] Spigot
 - [ ] Glowstone
 - [x] Fabric
-- [ ] Paper
+- [x] Paper
 - [ ] Forge
 - [ ] Mohist / Magma
 - [ ] Vanilla
