@@ -1,8 +1,9 @@
 #NoEnv
-; #Warn
+#Warn
 #SingleInstance Force
 SendMode Input
 SetWorkingDir %A_ScriptDir%
+;start
 if !FileExist("Servers") {
 FileCreateDir, Servers
 }
@@ -21,6 +22,7 @@ Gui, SelectServers:Color, 707070
 Gui, Add, Text,, Please enter the version of minecraft you want:
 Gui, SelectServers:Add, DropDownList, vServSoft, Paper (Plugins+)||Spigot (Plugins)|Fabric (Mods)
 Gui, SelectServers:Add, DropDownList, vServVers, 1.17.1||1.17|1.16.5|1.16.4|1.16.3|1.16.2|1.16.1|1.15.2|1.15.1|1.15|1.14.4|1.14.3|1.14.2|1.14.1|1.14|1.13.2|1.13.1|1.13|1.12.2|1.12.1|1.12|1.11.2|1.11.1|1.11|1.10.2|1.9.4|1.9.2|1.9|1.8.8|1.8.3|1.8
+Gui, Add, Link,, By clicking "OK" you agree to <a href="https://account.mojang.com/documents/minecraft_eula">Minecraft's EULA</a>
 Gui, SelectServers:Add, Button, Default w80 gSelectServersButtonOK, OK
 Gui, SelectServers:Show
 WinWaitClose, ahk_id %SelectServersHwnd%
@@ -119,6 +121,7 @@ exit /B
 }
 }
 Run, Run.Bat
+ExitApp, 0
 return
 SelectServersButtonOK:
 Gui, SelectServers:Submit
