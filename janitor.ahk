@@ -1,4 +1,4 @@
-﻿#NoEnv
+#NoEnv
 ; #Warn
 #SingleInstance Force
 SendMode Input
@@ -14,6 +14,5 @@ if !FileExist("Serkket.exe") {
 Goto, Progdwnld
 }
 ; End of check
-FileDelete, %A_ScriptDir%\*.sver ; Get rid of temporary files downloaded from program
 Run, Serkket.exe ; Open new version of program
 ExitApp, 0 ; Exit
