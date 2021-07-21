@@ -15,13 +15,13 @@ if ErrorLevel
 ExitApp 0
 else
 if !FileExist(%UserInput%) {
-MsgBox, 0, Serkket Servers, Server will build files, press ok to continue
+MsgBox, 0, Serkket Servers, Server will build files, press ok to continue `n Server will open when done
 FileCreateDir, %UserInput%
 }
 SetWorkingDir %UserInput%
-if !FileExist("spigot-1.16.5.jar") {
+if !FileExist("spigot-1.17.jar") {
 UrlDownloadToFile, https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar, BuildTools.jar
-RunWait, BuildTools.jar --rev 1.16.5
+RunWait, BuildTools.jar --rev 1.17
 }
 if !FileExist("Tunnel.exe") {
 UrlDownloadToFile, https://playit.gg/downloads/playit-win_64-0.4.3-rc2.exe, Tunnel.exe
@@ -34,11 +34,11 @@ FileAppend,
 (
 @echo off
 color 0A
-title %UserInput% Server - Spigot ALPHA 1.3.1
+title %UserInput% Server - Spigot ALPHA 4
 cls
 echo Starting %UserInput% Server...
 start Tunnel.exe
-java -server -Xmx1G -XX:+UnlockExperimentalVMOptions -jar spigot-1.16.5.jar nogui
+java -server -Xmx1G -XX:+UnlockExperimentalVMOptions -jar spigot-1.17.jar nogui
 color 04
 echo Server stopped
 pause>nul
