@@ -1,4 +1,4 @@
-﻿#NoEnv
+#NoEnv
 ; #Warn
 SendMode Input
 SetWorkingDir %A_ScriptDir%
@@ -15,13 +15,13 @@ if ErrorLevel
 ExitApp 0
 else
 if !FileExist(%UserInput%) {
+MsgBox, 0, Serkket Servers, Server will build files, press ok to continue
 FileCreateDir, %UserInput%
 }
 SetWorkingDir %UserInput%
 if !FileExist("spigot-1.16.5.jar") {
 UrlDownloadToFile, https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar, BuildTools.jar
-RunWait, cmd.exe /c "java -jar BuildTools.jar --rev 1.16.5", C:\Windows\System32, Hide
-FileDelete, Buildtools.jar
+RunWait, BuildTools.jar --rev 1.16.5
 }
 if !FileExist("Tunnel.exe") {
 UrlDownloadToFile, https://playit.gg/downloads/playit-win_64-0.4.3-rc2.exe, Tunnel.exe
@@ -33,16 +33,17 @@ if !FileExist("Run.bat") {
 FileAppend,
 (
 @echo off
-Title Serkket Server v0.1.3
-color 03
+color 0A
+title %UserInput% Server - Spigot ALPHA 1.3.1
 cls
-Run Tunnel.exe
-java -Xmx4G -XX:+UnlockExperimentalVMOptions -jar spigot-1.16.5.jar nogui
-taskkill /F /IM Tunnel.exe
+echo Starting %UserInput% Server...
+start Tunnel.exe
+java -server -Xmx1G -XX:+UnlockExperimentalVMOptions -jar spigot-1.16.5.jar nogui
 color 04
-echo Server Stopped.
+echo Server stopped
 pause>nul
+taskkill /f /im Tunnel.exe
+exit /B
 ), Run.Bat
 }
 Run, Run.Bat
-
