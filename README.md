@@ -1,6 +1,10 @@
 # Serkket
 A free minecraft server builder fit for even the **noobiest** of server makers!
 
+## Being completley re-written in python!
+Currently serkket is being re-written in python, for better GUIs, support, and more!
+To follow updates, ping ***BluNate#8439*** on discord about being a beta tester
+
 ### Looking for [Serkket Bedrock?](https://github.com/Epicgamernate/SerkketBedrock/)
 
 ## Why?
@@ -16,8 +20,8 @@ Put any world you want into the world folder to play it.
 ### 4: Fully Customizable
 Customize anything to your liking and tastes!
 
-### 5: Plugins or ~~mods~~
-Vanilla too boring? Get different versions of Serkket allowing the plugins or ~mods~ of your choosing.
+### 5: Plugins or mods
+Vanilla too boring? Get different versions of Serkket allowing the plugins or mods of your choosing.
 
 ### 6: EZ 2 use
 Simple GUI and simplified setup makes Serkket a perfect choice!
@@ -32,10 +36,8 @@ Play with friends from anywhere, anytime, always
 Play with people from bedrock AND java!
 
 #### Supported Server types:
-- [x] Spigot
-- [ ] Glowstone
-- [x] Fabric
-- [x] Paper
+- [x] Purpur
+- [ ] Sponge
+- [ ] Fabric
 - [ ] Forge
-- [ ] Mohist / Magma
 - [ ] Vanilla
